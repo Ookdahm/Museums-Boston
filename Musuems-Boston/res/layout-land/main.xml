@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:myapp="http://schemas.android.com/apk/res/com.androidsfuture.museumsboston"    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/boathouse_row">
+
+<TextView 
+		android:text="M  u  s  e  u  m  s    I  n    B o s t o n" 
+		android:id="@+id/TitleText" 
+		android:textSize="25dip"
+		android:textColor="@color/text_color"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:paddingTop="10dip"
+		android:paddingBottom="10dip"
+		android:background="#AA000000"
+		android:gravity="center"></TextView>
+<View 
+		android:id="@+id/View01" 
+		android:background="@color/text_color"
+		android:layout_below="@id/TitleText" 
+		android:layout_width="fill_parent" 
+		android:layout_height="1dip"></View>
+<TextView 
+		android:text="List All" 
+		android:id="@+id/ListAll" 
+		android:textSize="20dip"
+		
+		android:layout_below="@id/View01" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:paddingTop="3dip"
+		android:paddingLeft="5dip"
+		android:background="@color/opaqueLight"
+		android:paddingRight="75dip"
+		android:linksClickable="true"
+		></TextView>
+<TextView 
+		android:text="List Free" 
+		android:id="@+id/ListFree" 
+		android:textSize="20dip"
+		android:layout_below="@id/ListAll" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:paddingTop="3dip"
+		android:paddingLeft="5dip"
+		android:paddingRight="60dip"
+		android:background="@color/opaqueLight"
+		android:linksClickable="true"></TextView>
+<TextView 
+		android:text="List Mansions" 
+		android:id="@+id/ListMansions" 
+		android:textSize="20dip"
+		android:layout_below="@id/ListFree" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:paddingTop="3dip"
+		android:paddingLeft="5dip"
+		android:paddingRight="8dip"
+		android:background="@color/opaqueLight"
+		android:linksClickable="true"></TextView>
+<TextView 
+		android:text="List History" 
+		android:id="@+id/ListHistory" 
+		android:textSize="20dip"
+		android:layout_below="@id/ListMansions" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:paddingTop="3dip"
+		android:paddingLeft="5dip"
+		android:paddingRight="28dip"
+		android:background="@color/opaqueLight"
+		android:linksClickable="true"></TextView>
+<TextView 
+		android:text="List Art" 
+		android:id="@+id/ListArt" 
+		android:textSize="20dip"
+		
+		android:layout_below="@id/ListHistory" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:paddingTop="3dip"
+		android:paddingLeft="5dip"
+		android:paddingRight="74dip"
+		android:background="@color/opaqueLight"
+		android:linksClickable="true"></TextView>
+<TextView 
+		android:text="List Science" 
+		android:id="@+id/ListScience" 
+		android:textSize="20dip"
+		android:layout_below="@id/ListArt" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:paddingTop="3dip"
+		android:paddingLeft="5dip"
+		android:paddingRight="27dip"
+		android:paddingBottom="32dip"
+		android:background="@color/opaqueLight"
+		android:linksClickable="true"></TextView>
+
+<TextView 
+		android:text="Search: " 
+		android:visibility="gone"
+		android:id="@+id/SearchText" 
+		android:textSize="20dip"
+		android:textColor="@color/color_white"
+		android:layout_below="@id/ListScience" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:paddingTop="3dip"
+		android:paddingLeft="5dip"
+		android:background="@color/opaqueLight"></TextView>
+			<EditText 
+					android:text="" 
+					android:visibility="gone"
+					android:textSize="15dip"
+					android:id="@+id/EditText01" 
+					android:layout_toRightOf="@id/SearchText" 
+					android:layout_below="@id/ListScience"
+					android:layout_width="142dip" 
+					android:layout_height="35dip"
+					></EditText>
+<View 
+		android:id="@+id/View02" 
+		android:background="@color/text_color"
+		android:layout_below="@id/EditText01" 
+		android:layout_width="wrap_content" 
+		android:layout_height="1dip"></View>
+	
+			<ListView 
+				android:id="@android:id/list" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/ListAll" 
+				android:layout_below="@id/View01"
+				android:layout_above="@id/View02"
+				android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+				android:cacheColorHint="#00000000"
+				>
+			</ListView>
+			<TextView 
+					android:id="@android:id/empty" 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content">
+			</TextView>		
+
+
+<com.admob.android.ads.AdView
+android:id="@+id/ad"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+myapp:backgroundColor="#000000"
+myapp:primaryTextColor="#FFFFFF"
+myapp:secondaryTextColor="#CCCCCC"
+/>
+
+</RelativeLayout>
